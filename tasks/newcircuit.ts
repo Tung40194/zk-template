@@ -1,6 +1,6 @@
-import { ethers } from "hardhat";
-import { task } from "hardhat/config";
-import { CircomCircuitConfig } from "hardhat-circom";
+require("dotenv").config()
+const { task } = require("hardhat/config");
+const { CircomCircuitConfig } = require("hardhat-circom");
 const fs = require("fs");
 
 const CONFIG_PATH = process.env.BASE_PATH + "/circuits.config.json";
@@ -10,7 +10,7 @@ task("newcircuit", "Generate config for a new circuit")
   .addParam("name", "Name of the circuit")
   .setAction(async (taskArgs, {}) => {
 
-    let circuitsConfig: CircomCircuitConfig[] = [];
+    let circuitsConfig = [];
 
     // check if file exists
     if (fs.existsSync(CONFIG_PATH)) {
@@ -32,7 +32,7 @@ task("newcircuit", "Generate config for a new circuit")
     fs.closeSync(fs.openSync(DIR_PATH + taskArgs.name + "/circuit.circom", 'w'))
 
     // create a new circuit config
-    const circuitConfig: CircomCircuitConfig = {
+    const circuitConfig = {
       name: taskArgs.name,
       version: 2,
       protocol: "groth16",

@@ -1,7 +1,10 @@
 /** @type import('hardhat/config').HardhatUserConfig */
 require("hardhat-circom");
 require("@nomiclabs/hardhat-ethers");
-const circuits = require('./circuits.config.json')
+const circuits = require('./circuits.config.json');
+
+// tasks
+require("./tasks/newcircuit.ts");
 
 module.exports = {
   solidity: {

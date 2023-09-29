@@ -1,24 +1,24 @@
 [
-    {
-      "name": "hash",
-      "protocol": "groth16",
-      "circuit": "hash/circuit.circom",
-      "input": "hash/input.json",
-      "wasm": "hash/out/circuit.wasm",
-      "zkey": "hash/out/hash.zkey",
-      "vkey": "hash/out/hash.vkey",
-      "r1cs": "hash/out/hash.r1cs",
-      "beacon": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
-    },
-    {
-      "name": "simple-polynomial",
-      "protocol": "groth16",
-      "circuit": "simple-polynomial/circuit.circom",
-      "input": "simple-polynomial/input.json",
-      "wasm": "simple-polynomial/out/circuit.wasm",
-      "zkey": "simple-polynomial/out/simple-polynomial.zkey",
-      "vkey": "simple-polynomial/out/simple-polynomial.vkey",
-      "r1cs": "simple-polynomial/out/simple-polynomial.r1cs",
-      "beacon": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+  {
+    "name": "hash",
+    "protocol": "groth16",
+    "circuit": "hash/circuit.circom",
+    "input": "hash/input.json",
+    "wasm": "hash/out/circuit.wasm",
+    "zkey": "hash/out/hash.zkey",
+    "vkey": "hash/out/hash.vkey",
+    "r1cs": "hash/out/hash.r1cs",
+    "beacon": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+  },
+  {
+    "name": "simple-polynomial",
+    "protocol": "groth16",
+    "circuit": "simple-polynomial/circuit.circom",
+    "input": "simple-polynomial/input.json",
+    "wasm": "simple-polynomial/out/circuit.wasm",
+    "zkey": "simple-polynomial/out/simple-polynomial.zkey",
+    "vkey": "simple-polynomial/out/simple-polynomial.vkey",
+    "r1cs": "simple-polynomial/out/simple-polynomial.r1cs",
+    "beacon": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
     }
 ]
