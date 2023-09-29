@@ -1,0 +1,16 @@
+{
+  "name": "zk-template",
+  "version": "1.0.0",
+  "description": "hardhat-circom based template",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "author": "tung",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "circomlib": "^2.0.5",
+    "hardhat-circom": "^3.3.2"
+  }
+}
