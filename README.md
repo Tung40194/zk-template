@@ -7,6 +7,9 @@ A modification from https://github.com/gmchad/zardkat.git that works on js (the 
 npx hardhat newcircuit --name <name of the circuit>
 
 #### 2. compiling the circuits
+npx hardhat circom
+
+#### 2. compiling the solidity verifier
 npx hardhat compile
 
 #### 3. test proof generation and solidity verifier
