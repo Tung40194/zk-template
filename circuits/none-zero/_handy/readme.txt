@@ -1,0 +1,1 @@
+These two circuits serve the same purpose but differ in the compiled r1cs and probably performance of them.

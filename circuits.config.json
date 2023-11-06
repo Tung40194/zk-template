@@ -20,5 +20,17 @@
     "vkey": "simple-polynomial/out/simple-polynomial.vkey",
     "r1cs": "simple-polynomial/out/simple-polynomial.r1cs",
     "beacon": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
-    }
+  },
+  {
+    "name": "none-zero",
+    "version": 2,
+    "protocol": "groth16",
+    "circuit": "none-zero/circuit.circom",
+    "input": "none-zero/input.json",
+    "wasm": "none-zero/out/circuit.wasm",
+    "zkey": "none-zero/out/none-zero.zkey",
+    "vkey": "none-zero/out/none-zero.vkey",
+    "r1cs": "none-zero/out/none-zero.r1cs",
+    "beacon": "0102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f"
+  }
 ]
