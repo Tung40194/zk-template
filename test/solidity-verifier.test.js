@@ -5,6 +5,7 @@ const {generateCallData } = require("./zkHelpers");
 const HASH_CIRCUIT_PATH_SUFFIX = "hash/";
 const POLYNOM_CIRCUIT_PATH_SUFFIX = "simple-polynomial/";
 const NONZERO_CIRCUIT_PATH_SUFFIX = "none-zero/";
+const AVERAGE_CIRCUIT_PATH_SUFFIX = "average/";
 
 describe("Testing zk proof generation and solidity verifier", () => {
 
@@ -64,6 +65,27 @@ describe("Testing zk proof generation and solidity verifier", () => {
 
     // generate proof call data
     const {pi_a, pi_b, pi_c, input} = await generateCallData(NONZERO_CIRCUIT_PATH_SUFFIX);
+    console.log(">>>proof and expected value: ", {pi_a, pi_b, pi_c, input})
+
+    // verify proof on contract
+    //@ts-ignore
+    const tx = await verifier.verifyProof(pi_a, pi_b, pi_c, input)
+    
+    console.log(`Verifier result: ${tx}`)
+    // console.assert(tx == true, "Proof verification failed!");
+    expect(tx).to.equal(true);
+  });
+
+  it.only("Should deploy Average verifier and execute on-chain zk verification successfully", async () => {
+    // deploy contract
+    const Verifier = await ethers.getContractFactory("contracts/AverageVerifier.sol:Verifier");
+    const verifier = await Verifier.deploy();
+    await verifier.deployed();
+
+    console.log(`Verifier deployed to ${verifier.address}`);
+
+    // generate proof call data
+    const {pi_a, pi_b, pi_c, input} = await generateCallData(AVERAGE_CIRCUIT_PATH_SUFFIX);
     console.log(">>>proof and expected value: ", {pi_a, pi_b, pi_c, input})
 
     // verify proof on contract
